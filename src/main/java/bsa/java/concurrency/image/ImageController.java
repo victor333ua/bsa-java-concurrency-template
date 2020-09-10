@@ -19,6 +19,7 @@ public class ImageController {
     @PostMapping("/batch")
     @ResponseStatus(HttpStatus.CREATED)
     public void batchUploadImages(@RequestParam("images") MultipartFile[] files) {
+
         imageService.saveAll(files);
     }
 
